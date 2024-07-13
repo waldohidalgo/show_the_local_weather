@@ -47,7 +47,7 @@ export default function Weather() {
   }, []);
 
   return (
-    <div className="my-[50px]">
+    <div className="my-[50px] overflow-auto">
       {isLoading ? (
         <div className="flex justify-center flex-col items-center">
           <p className="text-blue-500 text-center font-bold ">Loading...</p>
