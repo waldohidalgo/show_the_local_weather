@@ -21,7 +21,8 @@ async function fetchWeatherData() {
 }
 
 function changeCelsiusToFahrenheit(temp) {
-  return (temp * 9) / 5 + 32;
+  const tempInFahrenheit = (temp * 9) / 5 + 32;
+  return tempInFahrenheit.toFixed(2);
 }
 export default function Weather() {
   const [weatherData, setWeatherData] = useState(null);
@@ -49,8 +50,8 @@ export default function Weather() {
   return (
     <div className="my-[50px] overflow-auto">
       {isLoading ? (
-        <div className="flex justify-center flex-col items-center">
-          <p className="text-blue-500 text-center font-bold ">Loading...</p>
+        <div className="flex justify-center flex-col items-center py-5 ">
+          <p className="text-blue-500 text-center font-bold mb-2">Loading...</p>
           <div className="loader"></div>
         </div>
       ) : error ? (
