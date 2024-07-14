@@ -8,6 +8,11 @@ export default function Home() {
         <h1 className="text-3xl font-bold underline text-center  ">
           Show Local Weather
         </h1>
+        <p className="text-center mt-10 max-w-[600px] mx-auto">
+          Activate GPS or give the browser permission to access your location
+          and the temperature will be displayed. If any error occurs it will be
+          displayed on the screen.
+        </p>
       </header>
       <main className="py-8">
         <Weather />
